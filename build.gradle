@@ -1,0 +1,28 @@
+plugins {
+    id 'java-library'
+}
+
+
+group = 'ru.jerrykerry'
+version = '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:7.9.0",
+            "org.junit.jupiter:junit-jupiter:5.10.0"
+
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
